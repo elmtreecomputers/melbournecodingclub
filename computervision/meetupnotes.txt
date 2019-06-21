@@ -1,0 +1,7 @@
+1. Install OpenCV on Pi https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi
+2. Install OPenCV on Ubuntu / Windows / Ubuntu
+3. Download skeletons from https://github.com/elmtreecomputers/CreativeCodingClub
+4. Run code to capture camera
+5. Run code to work with pictures
+6. Run code to detect face
+7. Run code to detect face during camera capture

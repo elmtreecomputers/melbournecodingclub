@@ -1,8 +1,6 @@
-import asyncio
 import eventlet
 import socketio
 import eventlet.wsgi
-#import uvicorn
 
 sio = socketio.Server(async_mode='eventlet')
 app = socketio.WSGIApp(sio)
@@ -25,5 +23,4 @@ def disconnect(sid):
     print('disconnect ', sid)
 
 if __name__ == '__main__':
-    #uvicorn.run(app, host='127.0.0.1', port=5000)
     eventlet.wsgi.server(eventlet.listen(('', 5000)), app)

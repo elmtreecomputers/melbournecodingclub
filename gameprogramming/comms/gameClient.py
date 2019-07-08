@@ -6,6 +6,10 @@ tank = {'id':'', 'team':'', 'x':-1, 'y':-1, 'bulletX':-1, 'bulletY':-1}
 def connect():
     print('connection established')
 
+@sio.on('update')
+def my_update(data):
+    print(data)
+
 @sio.on('message')
 def my_message(data):
     if(data['sender']!=sio.sid):

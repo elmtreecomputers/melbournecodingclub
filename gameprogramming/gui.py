@@ -1,5 +1,6 @@
 import pygame
 from comms import gameClient as gc
+import random
 
 player = input("Player 1 or 2?")
 
@@ -39,8 +40,6 @@ lastY = y
 
 
 
-
-
 while run:
     pygame.time.delay(100)
 
@@ -73,6 +72,10 @@ while run:
     elif tank['team']=='red':
         col = (245, 10, 10)
         pygame.draw.rect(win, col, (tank['x'], tank['y'], width, height))
+    elif tank['team']=='bot':
+        col = (10, 255, 10)
+        pygame.draw.rect(win, col, (tank['x'], tank['y'], width, height))
+
 
     message = {'id': gc.getID(),'team': pTeam, 'x':x, 'y':y , 'bulletX':-1, 'bulletY':-1}
     if lastX!=x or lastY!=y:
